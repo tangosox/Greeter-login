@@ -34,10 +34,15 @@ This script allows logging into the Plasma greeter remotely via SSH by simulatin
 
 ## Usage
 
+Make executable:
+
+```bash
+chmod +x greeter-login.sh
+```
 Run via SSH once the system is at the login screen:
 
 ```bash
-greeter-login.sh
+./greeter-login.sh
 ```
 
 ## Security Notes
