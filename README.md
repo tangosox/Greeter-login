@@ -50,4 +50,4 @@ Run via SSH once the system is at the login screen:
 - Your password is entered via simulated keyboard input.
 - It is read silently and unset immediately after use.
 - This script is intended for personal remote access setups.
-- Use at your own risk.```
+- Use at your own risk.
