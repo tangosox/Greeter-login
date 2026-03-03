@@ -14,10 +14,12 @@ This script allows logging into the Plasma greeter remotely via SSH by simulatin
 ## Requirements
 
 - KDE Plasma Login Manager
+- Must be run after the system has reached the Plasma login screen
 - `ydotool`
 - `uinput` kernel module enabled
 - User added to the `input` group
 - SSH access to the machine
+  
 
 ## How It Works
 
@@ -35,14 +37,9 @@ This script allows logging into the Plasma greeter remotely via SSH by simulatin
 Run via SSH once the system is at the login screen:
 
 ```bash
-bash greeter-login.sh
+greeter-login.sh
 ```
 
-## Security Warning (Important)
-
-This script types your password programmatically. That needs to be acknowledged.
-
-```markdown
 ## Security Notes
 
 - Your password is entered via simulated keyboard input.
