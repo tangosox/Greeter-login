@@ -10,6 +10,7 @@ Automates login at the KDE Plasma greeter using `ydotool`, allowing remote GUI a
 When using Sunshine for remote streaming, the server cannot access a Wayland session until a user logs in.
 
 This script allows logging into the Plasma greeter remotely via SSH by simulating keyboard input using `ydotool`.
+I've also just recently added support for unlocking kscreenlocker.
 
 ## Requirements
 
