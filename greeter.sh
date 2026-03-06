@@ -38,7 +38,7 @@ wait_for_socket() {
 
 ########################################
 
-wait_for_greeter
+wait_for_unlock_or_greeter
 
 echo "[*] Starting temporary ydotoold (user mode)..."
 
