@@ -1,14 +1,22 @@
 #!/usr/bin/env bash
 set -uo pipefail   # ← remove -e to avoid premature exits
 
-wait_for_greeter() {
-    echo "[*] Waiting for Plasma Login Manager on seat0..."
+wait_for_unlock_or_greeter() {
+    echo "[*] Waiting for greeter OR locked session..."
 
     while true; do
+        # Case 1: Login manager greeter on seat0
         if loginctl list-sessions --no-legend | grep -q 'seat0.*greeter'; then
             echo "[✓] Greeter detected on seat0"
             return
         fi
+
+        # Case 2: User session locked (kscreenlocker running)
+        if pgrep -u paul -x kscreenlocker_greet >/dev/null 2>&1; then
+            echo "[✓] Locked session detected (kscreenlocker)"
+            return
+        fi
+
         sleep 0.5
     done
 }
