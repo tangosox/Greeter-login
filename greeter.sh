@@ -12,7 +12,7 @@ wait_for_unlock_or_greeter() {
         fi
 
         # Case 2: User session locked (kscreenlocker running)
-        if pgrep -u "$USER" -x kscreenlocker_greet >/dev/null 2>&1; then
+        if pgrep -u "$USER" -f kscreenlocker_greet >/dev/null 2>&1; then
             echo "[✓] Locked session detected (kscreenlocker)"
             return
         fi
